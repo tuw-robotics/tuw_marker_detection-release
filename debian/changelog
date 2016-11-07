@@ -1,0 +1,8 @@
+ros-kinetic-tuw-marker-pose-estimation (0.0.2-0jessie) jessie; urgency=high
+
+  * Initial commit
+  * Contributors: Lukas Pfeifhofer
+
+ -- Lukas Pfeifhofer <lukas.pfeifhofer@devlabs.pro>  Sun, 06 Nov 2016 23:00:00 -0000
+
+
