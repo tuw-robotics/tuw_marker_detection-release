@@ -1,12 +1,11 @@
 <?xml version="1.0"?>
 <package>
   <name>tuw_ellipses</name>
-  <version>0.0.2</version>
+  <version>0.0.4</version>
   <description>The tuw_ellipses package contains a computer vision library which is able to detect ellipses within images.  
     The package is able to estimate the pose of the circle related to the ellipse the circle diameter as well as the camera parameter are known.
     A dynamic reconfigure interface allows the user to tune the parameter of the system to ones needs.
     But be aware that the pose of a projected circle within a image (ellipse) has two solutions and only one is published as TF.
-    A costom message (v4r_msgs) publishes all the data as well as the pose ambiguity.
     </description>
 
   <!-- One maintainer tag required, multiple allowed, one person per tag --> 
@@ -46,31 +45,25 @@
   <!-- Use test_depend for packages you need only for testing: -->
   <!--   <test_depend>gtest</test_depend> -->
   <buildtool_depend>catkin</buildtool_depend>
-  <build_depend>cv_bridge</build_depend>
-  <build_depend>dynamic_reconfigure</build_depend>
-  <build_depend>image_geometry</build_depend>
-  <build_depend>image_transport</build_depend>
+  
+  <build_depend>cmake_modules</build_depend>
   <build_depend>roscpp</build_depend>
   <build_depend>rospy</build_depend>
+  <build_depend>dynamic_reconfigure</build_depend>
   <build_depend>tf</build_depend>
+  <build_depend>image_transport</build_depend>
   <build_depend>nodelet</build_depend>
-  <build_depend>geometry_msgs</build_depend>
-  <build_depend>visualization_msgs</build_depend>
-  <build_depend>message_generation</build_depend>
+  <build_depend>cv_bridge</build_depend>
   <build_depend>opencv3</build_depend>
   <build_depend>marker_msgs</build_depend>
   
-  <run_depend>cv_bridge</run_depend>
-  <run_depend>dynamic_reconfigure</run_depend>
-  <run_depend>image_geometry</run_depend>
-  <run_depend>image_transport</run_depend>
   <run_depend>roscpp</run_depend>
   <run_depend>rospy</run_depend>
-  <run_depend>tf</run_depend>
   <run_depend>nodelet</run_depend>
-  <run_depend>geometry_msgs</run_depend>
-  <run_depend>visualization_msgs</run_depend>
-  <run_depend>message_runtime</run_depend>
+  <run_depend>dynamic_reconfigure</run_depend>
+  <run_depend>tf</run_depend>
+  <run_depend>image_transport</run_depend>
+  <run_depend>cv_bridge</run_depend>
   <run_depend>opencv3</run_depend>
   <run_depend>marker_msgs</run_depend>
 
