@@ -34,8 +34,6 @@
 
 #include "ros/ros.h"
 #include <nodelet/nodelet.h>
-#include <visualization_msgs/Marker.h>
-#include "tuw_ellipses/ellipses.h"
 #include <cv_bridge/cv_bridge.h>
 #include <image_transport/image_transport.h>
 #include <dynamic_reconfigure/server.h>
@@ -43,8 +41,8 @@
 #include <boost/date_time/posix_time/posix_time.hpp>
 #include <tf/transform_broadcaster.h>
 #include <tuw_ellipses/ellipses_detection.h>
-#include <tuw_ellipses/markers.h>
 #include <marker_msgs/FiducialDetection.h>
+#include <marker_msgs/MarkerDetection.h>
 
 namespace tuw {
 
@@ -61,6 +59,9 @@ public:
         std::string node_name;
         bool debug_freeze;
         bool show_camera_image;
+        bool publishTF;
+        bool publishMarker;
+        bool publishFiducials;
         int show_camera_image_waitkey;
         int image_skip;
         bool skip_second_tf;
@@ -77,18 +78,15 @@ private: //functions
     void update ();
     void publishTf();
     void publishMarker (const std_msgs::Header &header);
-    void publishPerceptions (const std_msgs::Header &header);
     void publishFiducials (const std_msgs::Header &header);
     void createTransforms(const std_msgs::Header &header);
 private: // variables
     ros::NodeHandle n_;
     unsigned long  callback_counter_;
     tf::TransformBroadcaster transformBroadcaster_;
-    ros::Publisher pub_viz_marker_;
     ros::Publisher pub_ellipses_;
     ros::Publisher pub_perceptions_;
     ros::Publisher pub_fiducials_;
-    visualization_msgs::Marker msg_line_list_;
     image_transport::ImageTransport imageTransport_;
     image_transport::CameraSubscriber  sub_camera_;
     cv_bridge::CvImagePtr image_mono_;
