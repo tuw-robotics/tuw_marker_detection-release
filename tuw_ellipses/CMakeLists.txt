@@ -22,21 +22,11 @@ find_package(catkin REQUIRED COMPONENTS
 find_package( OpenCV REQUIRED )
 link_libraries(${OpenCV_LIBS})
 
-find_package(cmake_modules REQUIRED)
+#find_package(cmake_modules REQUIRED)
 
 find_package(Eigen3 REQUIRED)
 include_directories(${Eigen_INCLUDE_DIRS})
 
-add_message_files(
-  DIRECTORY msg
-  FILES
-  ellipse.msg
-  ellipses.msg
-  marker.msg
-  markers.msg
-  TransformArrayStamped.msg)
-  
-generate_messages(DEPENDENCIES geometry_msgs)
 
 #add dynamic reconfigure api
 generate_dynamic_reconfigure_options(
@@ -56,7 +46,7 @@ catkin_package(
 #  INCLUDE_DIRS include
 #  LIBRARIES tuw_ellipses
 #  CATKIN_DEPENDS cv_bridge dynamic_reconfigure image_geometry image_transport roscpp rospy tf
-  DEPENDS eigen3 OpenCV
+#  DEPENDS eigen3 OpenCV
 )
 
 ###########
@@ -96,7 +86,7 @@ add_executable(ellipses_node src/ellipses_node.cpp)
 ## as an example, message headers may need to be generated before nodes
 # add_dependencies(tuw_ellipses_node tuw_ellipses_generate_messages_cpp)
 add_dependencies(ellipses_nodelet ${PROJECT_NAME}_gencfg) 
-add_dependencies(ellipses_nodelet ${PROJECT_NAME}_gencpp)
+# add_dependencies(ellipses_nodelet ${PROJECT_NAME}_gencpp)
 
 ## Specify libraries to link a library or executable target against
 target_link_libraries(ellipses_nodelet
@@ -104,4 +94,39 @@ target_link_libraries(ellipses_nodelet
 )
 target_link_libraries(ellipses_node
    ellipses_nodelet ${catkin_LIBRARIES}
+)
+#############
+## Install ##
+#############
+
+# all install targets should use catkin DESTINATION variables
+# See http://ros.org/doc/api/catkin/html/adv_user_guide/variables.html
+
+## Mark executable scripts (Python etc.) for installation
+## in contrast to setup.py, you can choose the destination
+# install(PROGRAMS
+#   scripts/my_python_script
+#   DESTINATION ${CATKIN_PACKAGE_BIN_DESTINATION}
+# )
+
+## Mark executables and/or libraries for installation
+# install(TARGETS tuw_aruco tuw_aruco_node
+#   ARCHIVE DESTINATION ${CATKIN_PACKAGE_LIB_DESTINATION}
+#   LIBRARY DESTINATION ${CATKIN_PACKAGE_LIB_DESTINATION}
+#   RUNTIME DESTINATION ${CATKIN_PACKAGE_BIN_DESTINATION}
+# )
+
+## Mark cpp header files for installation
+#install(DIRECTORY include/${PROJECT_NAME}/
+#  DESTINATION ${CATKIN_PACKAGE_INCLUDE_DESTINATION}
+#  FILES_MATCHING PATTERN "*.h"
+#  PATTERN ".svn" EXCLUDE
+#)
+
+## Mark other files for installation (e.g. launch and bag files, etc.)
+install(DIRECTORY launch/
+  DESTINATION ${CATKIN_PACKAGE_SHARE_DESTINATION}/launch
+)
+install(DIRECTORY bags/
+  DESTINATION ${CATKIN_PACKAGE_SHARE_DESTINATION}/bags
 )
