@@ -2,6 +2,11 @@
 Changelog for package tuw_marker_pose_estimation
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+0.0.5 (2016-11-11)
+------------------
+* DynamicReconfigure files naming fixed
+* Contributors: Markus Bader
+
 0.0.4 (2016-11-11)
 ------------------
 
