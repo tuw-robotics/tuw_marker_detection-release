@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <package>
   <name>tuw_ellipses</name>
-  <version>0.0.4</version>
+  <version>0.0.5</version>
   <description>The tuw_ellipses package contains a computer vision library which is able to detect ellipses within images.  
     The package is able to estimate the pose of the circle related to the ellipse the circle diameter as well as the camera parameter are known.
     A dynamic reconfigure interface allows the user to tune the parameter of the system to ones needs.
@@ -54,7 +54,6 @@
   <build_depend>image_transport</build_depend>
   <build_depend>nodelet</build_depend>
   <build_depend>cv_bridge</build_depend>
-  <build_depend>opencv3</build_depend>
   <build_depend>marker_msgs</build_depend>
   
   <run_depend>roscpp</run_depend>
@@ -64,7 +63,6 @@
   <run_depend>tf</run_depend>
   <run_depend>image_transport</run_depend>
   <run_depend>cv_bridge</run_depend>
-  <run_depend>opencv3</run_depend>
   <run_depend>marker_msgs</run_depend>
 
 
