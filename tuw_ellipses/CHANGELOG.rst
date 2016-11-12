@@ -2,6 +2,11 @@
 Changelog for package tuw_ellipses
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+0.0.6 (2016-11-12)
+------------------
+* image_geometry was missing in package.xml
+* Contributors: Markus Bader
+
 0.0.5 (2016-11-11)
 ------------------
 * DynamicReconfigure files naming fixed
