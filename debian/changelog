@@ -1,0 +1,32 @@
+ros-kinetic-tuw-ellipses (0.0.5-0jessie) jessie; urgency=high
+
+  * DynamicReconfigure files naming fixed
+  * Contributors: Markus Bader
+
+ -- Markus Bader <markus.bader@tuwien.ac.at>  Thu, 10 Nov 2016 23:00:00 -0000
+
+ros-kinetic-tuw-ellipses (0.0.4-0jessie) jessie; urgency=high
+
+  * dynamic reconfiger compile order fixed for ellipses_nodelet
+  * Contributors: Markus Bader
+
+ -- Markus Bader <markus.bader@tuwien.ac.at>  Thu, 10 Nov 2016 23:00:00 -0000
+
+ros-kinetic-tuw-ellipses (0.0.3-0jessie) jessie; urgency=high
+
+  * cmake_modules to package xml added
+  * flags added to eaktivate publishing
+  * ellipses are publishing marker_msgs
+  * minor changes to fix jenkins build error
+  * Contributors: Markus Bader
+
+ -- Markus Bader <markus.bader@tuwien.ac.at>  Thu, 10 Nov 2016 23:00:00 -0000
+
+ros-kinetic-tuw-ellipses (0.0.2-0jessie) jessie; urgency=high
+
+  * Initial commit
+  * Contributors: Markus Bader, Lukas Pfeifhofer
+
+ -- Markus Bader <markus.bader@tuwien.ac.at>  Sun, 06 Nov 2016 23:00:00 -0000
+
+
