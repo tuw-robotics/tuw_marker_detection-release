@@ -2,10 +2,11 @@
 Changelog for package tuw_marker_detection
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+0.0.7 (2016-11-13)
+------------------
+
 0.0.6 (2016-11-12)
 ------------------
-* was missing in image_geometry package.xml added
-* Contributors: Markus Bader
 
 0.0.5 (2016-11-11)
 ------------------
