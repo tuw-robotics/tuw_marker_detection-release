@@ -1,3 +1,31 @@
+## tuw_marker_detection (melodic) - 0.1.1-1
+
+The packages in the `tuw_marker_detection` repository were released into the `melodic` distro by running `/usr/bin/bloom-release tuw_marker_detection --rosdistro melodic` on `Mon, 19 Nov 2018 12:30:57 -0000`
+
+These packages were released:
+- `tuw_aruco`
+- `tuw_checkerboard`
+- `tuw_ellipses`
+- `tuw_marker_detection`
+- `tuw_marker_pose_estimation`
+
+Version of package(s) in repository `tuw_marker_detection`:
+
+- upstream repository: https://github.com/tuw-robotics/tuw_marker_detection.git
+- release repository: unknown
+- rosdistro version: `null`
+- old version: `0.1.1-0`
+- new version: `0.1.1-1`
+
+Versions of tools used:
+
+- bloom version: `0.6.8`
+- catkin_pkg version: `0.4.9`
+- rosdep version: `0.13.0`
+- rosdistro version: `0.7.0`
+- vcstools version: `0.1.40`
+
+
 ## tuw_marker_detection (melodic) - 0.1.1-0
 
 The packages in the `tuw_marker_detection` repository were released into the `melodic` distro by running `/usr/bin/bloom-release tuw_marker_detection --rosdistro melodic` on `Mon, 19 Nov 2018 12:22:39 -0000`
