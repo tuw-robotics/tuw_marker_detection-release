@@ -1,0 +1,12 @@
+Source: ros-melodic-tuw-marker-detection
+Section: misc
+Priority: extra
+Maintainer: Markus Bader <markus.bader@tuwien.ac.at>
+Build-Depends: debhelper (>= 9.0.0), ros-melodic-catkin
+Homepage: 
+Standards-Version: 3.9.2
+
+Package: ros-melodic-tuw-marker-detection
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}, ros-melodic-tuw-aruco, ros-melodic-tuw-checkerboard, ros-melodic-tuw-ellipses, ros-melodic-tuw-marker-pose-estimation
+Description: The tuw_marker_detection package
